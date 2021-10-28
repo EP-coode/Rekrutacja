@@ -1,12 +1,12 @@
 .article-list {
     width: 100%;
     height: 100%;
-    border: 3px solid red;
 
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 
 

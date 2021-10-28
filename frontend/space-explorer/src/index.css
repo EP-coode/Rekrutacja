@@ -2,7 +2,10 @@
 
 :root {
   --main-bg-color: rgb(83, 83, 83);
+  --dark-bg-color: rgb(58, 57, 57);
+  --light-bg-color: rgb(204, 204, 204);
   --main-font-color: white;
+  --dark-font-color: black;
   --transition-duration: 200ms;
 }
 

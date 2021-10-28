@@ -1,18 +1,36 @@
 .space-article {
+    background-color: var(--dark-bg-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 5px black;
+
     display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+
     width: 30rem;
-    height: fit-content;
-    border: 1px solid black;
-    padding: 1rem;
+    align-items: stretch;
 }
+
 
 .space-article__banner {
     width: 100%;
     height: 20rem;
     position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px #000000;
 }
+
+.space-article__banner:after {
+    display: block;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 20%, rgba(255, 255, 255, 0) 50%);
+    z-index: 1;
+}
+
 
 .space-article__image {
     display: block;
@@ -20,18 +38,81 @@
     z-index: 1;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: var(--transition-duration);
 }
+
 
 .space-article__title {
     position: absolute;
     top: 1rem;
     left: 1rem;
     z-index: 2;
-
+    font-size: 1.8rem;
+    text-shadow: 10px 10px 10px 10px black;
 }
 
+.space-article__details {
+    flex-grow: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.space-article__issue-details {
+    background-color: var(--light-bg-color);
+    color: var(--dark-font-color);
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+
+    display: inline-block;
+}
+
+.space-article__foot {
+    display: flex;
+    margin-top: 2rem;
+
+    justify-content: space-between;
+}
+
+.space-article__timestamp {}
+
+.space-article__like-btn {
+    background-color: transparent;
+    border: none;
+    transition: var(--transition-duration);
+}
+
+.space-article__like-btn:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.space-article__like-btn.--red {
+    background-color: red;
+}
+
+.space-article__source {
+    display: block;
+    position: absolute;
+    z-index: 4;
+    background-color: var(--main-bg-color);
+    text-shadow: none;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    bottom: -1rem;
+    left: 1rem;
+}
+
+/* 
 @media screen and (max-width: 700px) {
     .space-article {
         flex-grow: 1;
     }
-}
+} */
