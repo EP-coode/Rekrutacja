@@ -1,0 +1,10 @@
+.navigation {
+    width: 100vh;
+    height: 5rem;
+}
+
+.navigation__logo {}
+
+.navigation__option-list {}
+
+.navigation__option {}
