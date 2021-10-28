@@ -8,11 +8,11 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-      <Navigation/>
+      <Navigation />
       <main>
         <Switch>
-          <Route path='/fav' component={MainPage} exact/>
-          <Route path='/'    component={FavPage}/>
+          <Route path='/fav' component={FavPage} exact />
+          <Route path='/' component={MainPage} />
         </Switch>
       </main>
     </BrowserRouter>
