@@ -19,6 +19,7 @@ function ArticleList({ articles = [] }) {
             article={article}
             favourite={favs.isFav(article.id)}
             onFavClick={onFavClick}
+            key={article.id}
         />
     ))
 

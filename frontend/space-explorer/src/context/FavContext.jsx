@@ -16,6 +16,7 @@ export default function FavProvider({ children }) {
     const fav_json = localStorage.getItem('fav_articles', null);
     const [favArticlesIDs, setfavArticlesIDs] = useState(fav_json ? JSON.parse(fav_json) : [])
 
+
     const removeFav = articleID => {
         setfavArticlesIDs(articleIds => {
             const filtered_articleIDs = articleIds.filter(_articleID => _articleID != articleID)
@@ -31,7 +32,6 @@ export default function FavProvider({ children }) {
             localStorage.setItem("fav_articles", JSON.stringify(new_articleIDs))
             return new_articleIDs
         })
-        setfavArticlesIDs(articleIds => [articleID, ...articleIds])
         // może zrobić się niewydajnie
     }
 

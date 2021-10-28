@@ -3,20 +3,20 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import FavProvider from './context/FavContext';
 import Navigation from './components/Navigation/Navigation';
 import MainPage from './pages/MainPage/MainPage'
-import FavPage from './pages/FavPAge/FavPage'
 import './App.css';
+import FavsPage from './pages/FavsPage/FavsPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Navigation />
       <main>
-        <Switch>
-          <FavProvider>
-            <Route path='/fav' component={FavPage} exact />
+        <FavProvider>
+          <Switch>
+            <Route path='/fav' component={FavsPage} exact />
             <Route path='/' component={MainPage} />
-          </FavProvider>
-        </Switch>
+          </Switch>
+        </FavProvider>
       </main>
     </BrowserRouter>
   );

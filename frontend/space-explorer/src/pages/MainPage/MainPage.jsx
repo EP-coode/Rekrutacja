@@ -3,12 +3,10 @@ import ArticleList from "../../components/Articles/List/ArticleList";
 import space_api from '../../client/api'
 
 import "./MainPage.css"
-import { FavContext } from "../../context/FavContext";
 
-const ARTICLES_PER_FETCH = 6
+const ARTICLES_PER_FETCH = 12
 
 function MainPage() {
-    const favs = useContext(FavContext)
     const [articles, setArticles] = useState([])
 
     const loadMore = async () => {
@@ -26,7 +24,7 @@ function MainPage() {
 
     return (
         <div className="main-page">
-            <ArticleList articles={articles}/>
+            <ArticleList articles={articles} />
             <button onClick={onLoadMore}> load more </button>
         </div>
     );
