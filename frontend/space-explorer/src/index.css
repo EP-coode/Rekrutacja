@@ -4,6 +4,7 @@
   --main-bg-color: rgb(83, 83, 83);
   --dark-bg-color: rgb(58, 57, 57);
   --light-bg-color: rgb(204, 204, 204);
+  --color-accent: rgba(6, 186, 231, 1);
   --main-font-color: white;
   --dark-font-color: black;
   --transition-duration: 200ms;
@@ -17,7 +18,27 @@
 }
 
 body {
-  background-color: var(--main-bg-color);
+  background-color: #17182f;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark-bg-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(3, 148, 184);
 }
 
 .btn {
@@ -33,6 +54,6 @@ body {
 }
 
 .btn.--active {
-  background-color: rgba(6, 186, 231, 1);
+  background-color: var(--color-accent);
   transition: var(--transition-duration);
 }
