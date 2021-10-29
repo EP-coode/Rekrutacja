@@ -1,3 +1,13 @@
 .favs-page {
     margin: 2rem 1rem;
 }
+
+.favs-page__empty-placeholder {
+    margin: 10rem auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.favs-page__spinner {
+    margin: 1rem auto;
+}

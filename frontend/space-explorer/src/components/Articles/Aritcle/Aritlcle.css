@@ -9,6 +9,7 @@
     flex-direction: column;
 
     width: 30rem;
+    max-width: 50rem;
     align-items: stretch;
 }
 

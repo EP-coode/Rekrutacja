@@ -8,7 +8,6 @@ function ArticleList({ articles = [] }) {
     const favs = useContext(FavContext)
 
     const onFavClick = articleID => {
-        console.log(articleID);
         if (favs.isFav(articleID))
             favs.removeFav(articleID)
         else
