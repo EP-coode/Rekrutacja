@@ -2,7 +2,7 @@ import "./Aritlcle.css"
 
 
 function Article({ article, favourite = false, onFavClick }) {
-    const { url, title, newsSite, imageUrl, id, publishedAt} = article
+    const { url, title, newsSite, imageUrl, id, publishedAt, summary} = article
     return (
         <li className="space-article">
             <a className="space-article__banner" href={url} target="_blank">
@@ -12,7 +12,7 @@ function Article({ article, favourite = false, onFavClick }) {
             </a>
             <div className="space-article__details">
                 <section className="space-article__summary">
-                    {article.summary}
+                    {summary}
                 </section>
                 {/* <span className="space-article__issue-details">{article.newsSite}</span> */}
                 <div className="space-article__foot">

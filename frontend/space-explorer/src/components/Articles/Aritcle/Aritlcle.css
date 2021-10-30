@@ -8,7 +8,7 @@
     flex-grow: 1;
     flex-direction: column;
 
-    width: 30rem;
+    width: 25rem;
     max-width: 50rem;
     align-items: stretch;
 }

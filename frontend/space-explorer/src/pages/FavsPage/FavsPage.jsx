@@ -3,8 +3,9 @@ import { useContext, useEffect, useState } from "react";
 import Spinner from "../../components/Spinner/Spinner"
 import { FavContext } from "../../context/FavContext";
 import space_api from "../../client/api";
-import "./FavsPage.css"
 import ArticleList from "../../components/Articles/List/ArticleList";
+
+import "./FavsPage.css"
 
 function FavsPage() {
     const [articles, setArticles] = useState([])

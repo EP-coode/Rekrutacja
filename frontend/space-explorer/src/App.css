@@ -1,5 +1,7 @@
 main {
+  /* dla 4k przeglądarkowe powiększenie powinno wystarczyć*/
   max-width: 1600px;
+  padding: 2rem 7rem;
   margin: 0 auto;
 }
 
@@ -12,8 +14,8 @@ main {
   z-index: -10;
 }
 
-/* @media screen and (max-width: 700px) {
-  #particles-container {
-    display: none;
-  }
-} */
+@media screen and (max-width: 700px) {
+  main {
+  padding: 2rem 1rem;
+}
+}
